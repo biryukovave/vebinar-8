@@ -1,17 +1,19 @@
+### Maven ###
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-.kotlin
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+# .mvn/ НЕ игнорируем — wrapper должен коммититься целиком,
+# а maven-wrapper.jar дополнительно защищён исключением ниже (см. Java).
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
 
 ### Eclipse ###
 .apt_generated
@@ -21,6 +23,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+bin/
 
 ### NetBeans ###
 /nbproject/private/
@@ -28,12 +31,80 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
 
 ### Mac OS ###
 .DS_Store
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+### Linux ###
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+### Selenide / Selenium отчёты ###
+build/
+reports/
+screenshots/
+downloads/
+
+### Allure отчёты ###
+.allure/
+allure-results/
+allure-report/
+allure-results-docker/
+
+### Данные приложения SmartShop (создаются при запуске сервера) ###
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+### Логи ###
+*.log
+logs/
+log/
+
+### Java ###
+*.class
+*.jar
+!**/maven-wrapper.jar
+*.war
+*.ear
+*.nar
+*.hprof
+hs_err_pid*
+replay_pid*
+
+### Kotlin ###
+.kotlin
+
+### Секреты и настройки окружения ###
+.env
+.env.*
+!.env.example
+*.secret
+*.properties.local
+application-local.properties
+
+### Кэш и временные файлы ###
+.cache/
+.tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+### Chrome / Selenium временные профили ###
+.chrome/
+.chromium/
+.selenium/
